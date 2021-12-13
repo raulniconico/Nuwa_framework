@@ -40,5 +40,10 @@ ActivationFunc is a class which contains several static activation function meth
 
 4 lists: gradient list, weights list, loss list and passer list. All the list is accessible during model training
 
+Use following line as Optimizer init:
+
+optim = Optimizer(nn,"SGD",iter = 20000, lr=1e-6)
+
+nn is an **NN** object, "SGD" is the optimize method to use, there are two options for now: "GD" or "SGD". iter = iteration numbers and lr the learning rate.
 ## <div align="center">Visual class</div>
 Version 0.0.1 provides plotloss() and plotgradientnorm() to plot loss flow and gradient flow. More plots available in very soon
