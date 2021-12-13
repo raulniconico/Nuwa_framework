@@ -47,3 +47,24 @@ optim = Optimizer(nn,"SGD",iter = 20000, lr=1e-6)
 nn is an **NN** object, "SGD" is the optimize method to use, there are two options for now: "GD" or "SGD". iter = iteration numbers and lr the learning rate.
 ## <div align="center">Visual class</div>
 Version 0.0.1 provides plotloss() and plotgradientnorm() to plot loss flow and gradient flow. More plots available in very soon
+
+Thus the whole training example is given as:
+
+layer_list = [NN.Layer('Linear',3,10,'LeakyReLU'),NN.Layer('Linear',10,3,'LeakyReLU'),
+              NN.Layer('Linear',3,1,'none')]
+
+dataset = Dataset(X, y)
+
+nn = NN(dataset)
+
+nn.addlayers(layer_list)
+
+optim = Optimizer(nn,"SGD",iter = 20000, lr=1e-6)
+
+optim.train()
+
+visual = Visual(optim)
+
+visual.plotloss()
+
+visual.plotgradientnorm()
