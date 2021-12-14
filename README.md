@@ -1,6 +1,8 @@
 # Nuwa_framework
 A deep learning framework powered by Zixing by using only numpy. 
 
+**THIS PROJECT IS CLOSED, GET LATEST VERSION FROM https://github.com/raulniconico/Nuwa0.0.1**
+
 In the folder, you'll find:
 <br>
 <br>
